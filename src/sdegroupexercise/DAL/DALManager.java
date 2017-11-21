@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import sdegroupexercise.BLL.BLLManager;
 
 /**
  *
@@ -18,7 +19,7 @@ public class DALManager implements DataAccesInterface
 {
 
     ConnectionManager cm = new ConnectionManager();
-    
+    static BLLManager BLLM = new BLLManager();
 
     @Override
     public String getDataFromDB() throws DALException
@@ -26,7 +27,7 @@ public class DALManager implements DataAccesInterface
         try(Connection con = cm.getConnection();)
         {
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM Jokes");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM Jokes WHERE ID = " + BLLM.getRandom());
             rs.next();
             return rs.getString("joke");
         }
