@@ -4,9 +4,10 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="310.0" prefWidth="650.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="sdegroupexercise.GUI.Controller.MainWindowController">
+<AnchorPane id="AnchorPane" prefHeight="310.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sdegroupexercise.GUI.Controller.MainWindowController">
    <children>
       <TextArea fx:id="txtAreaJoke" layoutX="14.0" layoutY="14.0" prefHeight="230.0" prefWidth="620.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
       <Button layoutX="15.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnClickGetJoke" text="Get Joke" AnchorPane.bottomAnchor="15.0" />
+      <Button layoutX="543.0" layoutY="264.0" mnemonicParsing="false" onAction="#btnClickSaveToDB" text="Save to DB" />
    </children>
 </AnchorPane>
